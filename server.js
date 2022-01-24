@@ -17,16 +17,14 @@ app.use(methodOverride('_method'));
 
 
 app.use(methodOverride('_method'))
-// app.use("/home", controllers.nft)
-// app.use("/author", controllers.author)
+app.use("/home", controllers.nft)
+
+app.use("/author", controllers.author)
 
 app.get("/", function(req, res) {
     res.send("Here I am and working :)")
 })
 
-app.get("/home", function(req, res) {
-    res.render("homePage.ejs")
-})
 
 app.get("/*", (req, res) => {
     const context = { error: req.error };
