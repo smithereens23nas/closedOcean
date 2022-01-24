@@ -24,6 +24,10 @@ app.get("/", function(req, res) {
     res.send("Here I am and working :)")
 })
 
+app.get("/home", function(req, res) {
+    res.render("homePage.ejs")
+})
+
 app.get("/*", (req, res) => {
     const context = { error: req.error };
     return res.status(404).render("404", context);
