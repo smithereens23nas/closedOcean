@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 // const controllers = require('./Controllers');
 const methodOverride = require('method-override');
-const PORT = 5000;
+const PORT = 4000;
 
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({extended:false}));
