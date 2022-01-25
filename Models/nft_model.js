@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const  nft  = require('../Controllers');
 
 const nftSchema = new mongoose.Schema({
     name: {
@@ -20,5 +19,5 @@ const nftSchema = new mongoose.Schema({
     }
 });
 
-const NFT = mongoose.model(nft, nftSchema);
-module.exports = NFT;
+const nft = mongoose.model("nft", nftSchema);
+module.exports = nft;

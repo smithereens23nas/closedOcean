@@ -1,7 +1,6 @@
 const express = require('express');
-const req = require('express/lib/request');
 const router = express.Router();
-const { NFT } = require('../models')
+const { NFT } = require('../Models')
 
 router.get('/', (req,res) => {
     NFT.find({}, (error, foundNFT) => {
