@@ -67,13 +67,12 @@ router.post('/', (req, res) => {
     })
 })
 
-router.get('/showpage', (req,res) =>
-res.render("showPage.ejs"));
+
 
 
 //This is bringing me to the Show page for the designated picture!!!!!!!!! Grabbing item by id.
 router.get('/:nftId', (req, res) => {
-    Nft.findById(req.params.guitarId, (error, foundNFT) => {
+    Nft.findById(req.params.nftId, (error, foundNFT) => {
         if (error) {
            console.log(error);
            res.status(404).render('404.ejs', {error: error});
