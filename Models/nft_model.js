@@ -19,5 +19,5 @@ const nftSchema = new mongoose.Schema({
     }
 });
 
-const nft = mongoose.model("nft", nftSchema);
+const nft = mongoose.model("Nft", nftSchema);
 module.exports = nft;

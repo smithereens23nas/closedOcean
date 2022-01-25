@@ -1,19 +1,21 @@
 const express = require('express');
 const router = express.Router();
-const { NFT } = require('../Models')
+const { Nft } = require('../Models')
 
-router.get('/', (req,res) => {
-    NFT.find({}, (error, foundNFT) => {
-        res.render("explorePage.ejs", {nft: foundNFT})
-
+router.get('/explore', (req,res) => {
+    Nft.find({}, (error, foundNft) => {
+        
+        if(error) return console.log(error);
+        console.log(foundNft)
+        res.render("explorePage.ejs", {nft: foundNft})
     })
 })
 
 router.post('/', (req,res) => {
     
-    NFT.deleteMany({}, (error, deletedNFT) => {
+    Nft.deleteMany({}, (error, deletedNFT) => {
         if(error) console.log(error);
-        NFT.insertMany(
+        Nft.insertMany(
             [
                 {
                     name: "NFT #1 Singularity of Humanity",
@@ -52,7 +54,7 @@ router.post('/', (req,res) => {
 
 router.post('/', (req, res) => {
     // Start by console logging things out here for the req, then req.body
-    NFT.create(req.body, (error, createdNFT) => {
+    Nft.create(req.body, (error, createdNFT) => {
         if(error) console.log(error);
         console.log(createdNFT);
         
@@ -67,7 +69,7 @@ res.render("showPage.ejs"));
 
 //This is bringing me to the Show page for the designated picture!!!!!!!!! Grabbing item by id.
 router.get('/:nftId', (req, res) => {
-    NFT.findById(req.params.guitarId, (error, foundNFT) => {
+    Nft.findById(req.params.guitarId, (error, foundNFT) => {
         if (error) {
            console.log(error);
            res.status(404).render('404.ejs', {error: error});
@@ -81,7 +83,7 @@ router.get('/:nftId', (req, res) => {
  
  
  router.delete('/:nftId', (req, res) => {
-    NFT.findByIdAndDelete(req.params.guitarId, (error, deleteNFT) => {
+    Nft.findByIdAndDelete(req.params.guitarId, (error, deleteNFT) => {
         if(error) {
             console.log(error);
             res.send(error);
@@ -93,7 +95,7 @@ router.get('/:nftId', (req, res) => {
 })
  
 router.get('/:nftId/edit', (req, res)=>{
-    NFT.findById(req.params.guitarId, (error, updatednft)=>{
+    Nft.findById(req.params.guitarId, (error, updatednft)=>{
         if(error){
             console.log(error);
             res.status(404).render('404.ejs', {error: error});
@@ -105,7 +107,7 @@ router.get('/:nftId/edit', (req, res)=>{
 
   router.put('/:nftId', (req, res) => {
    
-    NFT.findByIdAndUpdate(req.params.guitarId, req.body,(error, updatedNFT) => {
+    Nft.findByIdAndUpdate(req.params.guitarId, req.body,(error, updatedNFT) => {
         if (error) {
             console.log(error);
             res.status(404).render('404.ejs', {error: error});
