@@ -2,6 +2,10 @@ const express = require('express');
 const router = express.Router();
 const { Nft } = require('../Models')
 
+router.get("/home", function(req, res) {
+    res.render("homePage.ejs")
+})
+
 router.get('/explore', (req,res) => {
     Nft.find({}, (error, foundNft) => {
         
@@ -74,7 +78,7 @@ router.get('/:nftId', (req, res) => {
            console.log(error);
            res.status(404).render('404.ejs', {error: error});
         };
-        return res.render('show.ejs', {nft: foundNFT});
+        return res.render('showPage.ejs', {nft: foundNFT});
     });
  });
 
@@ -100,7 +104,7 @@ router.get('/:nftId/edit', (req, res)=>{
             console.log(error);
             res.status(404).render('404.ejs', {error: error});
         }
-        return res.render('edit.ejs', {nft: updatednft});
+        return res.render('createPage.ejs', {nft: updatednft});
     });
   });
 

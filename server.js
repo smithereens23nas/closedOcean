@@ -14,7 +14,7 @@ app.use(express.static("public"));
 app.use(methodOverride("_method"));
 
 app.use(methodOverride("_method"));
-app.use("/home", controllers.nft);
+app.use("/", controllers.nft);
 
 app.use("/author", controllers.author);
 
