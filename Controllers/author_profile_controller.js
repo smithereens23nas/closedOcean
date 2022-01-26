@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { Author } = require("../Models");
 
-router.get("/", (req, res) => {
+router.get("/author", (req, res) => {
   Author.find({}, (error, foundAuthor) => {
     if (error) return console.log(error);
 
@@ -14,7 +14,7 @@ router.get("/", (req, res) => {
   });
 });
 
-router.post('/', (req, res) => {
+// router.post('/', (req, res) => {
     Author.deleteMany({}, (error, deletedAuthor) => {
         if(error) console.log(error);
         Author.insertMany(
@@ -51,6 +51,8 @@ router.post('/', (req, res) => {
     )
     
     // Start by console logging things out here for the req, then req.body
+    // })
+    router.post('/', (req, res)=>{
     Author.create(req.body, (error, createdProduct) => {
         if(error) console.log(error);
         console.log(createdProduct);
@@ -60,6 +62,5 @@ router.post('/', (req, res) => {
     })
 })
 
-router.get("")
 
 module.exports = router;
