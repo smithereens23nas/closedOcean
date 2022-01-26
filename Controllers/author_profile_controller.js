@@ -6,10 +6,10 @@ router.get("/author", async (req, res) => {
   try {
     const author = await Author.find({});
     const context = { author };
-    console.log("=======================================================");
-    // console.log(context);
+    // console.log("=======================================================");
+    // // console.log(context);
 
-    console.log("=======================================================");
+    // console.log("=======================================================");
     res.render("authorPage.ejs", context);
   } catch (error) {
     console.log(error);
