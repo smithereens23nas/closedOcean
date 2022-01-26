@@ -6,16 +6,24 @@ router.get("/home", function(req, res) {
     res.render("homePage.ejs")
 })
 
-router.get('/explore', (req,res) => {
-    Nft.find({}, (error, foundNft) => {
-        
-        if(error) return console.log(error);
-        console.log(foundNft)
-        res.render("explorePage.ejs", {nft: foundNft})
-    })
-})
+router.get('/explore', async (req,res) => {
 
-router.post('/', (req,res) => {
+    try{
+        const nft = await Nft.find({});
+        const context = {nft}
+        console.log('=======================================================')
+        console.log(context);
+        
+        console.log('=======================================================')
+        res.render("explorePage.ejs", context)
+    } catch(error){
+        console.log(error);
+        req.error = error
+        return next();
+    }
+});
+
+// router.post('/', (req,res) => {
     
     Nft.deleteMany({}, (error, deletedNFT) => {
         if(error) console.log(error);
@@ -51,7 +59,7 @@ router.post('/', (req,res) => {
         console.log(deletedNFT)
     }
     )
-})
+// })
 
 
 
