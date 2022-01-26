@@ -14,8 +14,8 @@
     
     <main class="container is-max-widescreen">
         <div class="columns is-multiline p-5">
-            <% for(let idx = 0; idx < authors.length; idx++){ %> 
-                <% const authors = authors[idx] %>
+            <% for(let idx = 0; idx < author.length; idx++){ %> 
+                <% const authors = author[idx] %>
                 
                 <div class="column is-one-third">
                     <article class="card">
@@ -28,7 +28,7 @@
                     <div class="card-content">
                         <div class="content">
                             <h3>
-                                <a href="/author/<%= authors.id %>"><%= authors.name %> </a>
+                                <a href="/author/<%= authors._id %>"><%= authors.name %> </a>
                             </h3>
                             
                             <p>$<%= authors.price %></p>
