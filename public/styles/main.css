@@ -1,5 +1,28 @@
-.is-328x328 {
-    width: 450px;
-    height: 450px;
+.hi {
+  text-decoration: none;
+  outline: red solid 10px;
+  z-index: 100;
+}
+.logo {
+  width: 200px;
+  height: 100%;
+}
+.logo:hover {
+  cursor: pointer !important;
+}
+.cursor {
+  cursor: pointer;
+}
 
+.blur {
+  filter: blur(5px);
+}
+
+.cover-image {
+background-image: url("https://free4kwallpapers.com/uploads/originals/2019/10/15/ocean-sunset-wallpaper.jpg");
+  height: 100vh;
+  width: 100vw;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
