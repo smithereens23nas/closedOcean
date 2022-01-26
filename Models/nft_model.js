@@ -5,6 +5,10 @@ const nftSchema = new mongoose.Schema({
         type: String,
         required: [true, 'name can not be empty']
     },
+    author: {
+        type: String,
+        required: [true, 'please enter name of the author.']
+    },
     price: {
         type: Number,
         min: [0, 'you can not add a negative number'],
