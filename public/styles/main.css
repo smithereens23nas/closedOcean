@@ -1,3 +1,8 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
 .hi {
   text-decoration: none;
   outline: red solid 10px;
@@ -35,5 +40,7 @@ background-image: url("https://free4kwallpapers.com/uploads/originals/2019/10/15
     grid-gap: 25px;
     margin: 75px 0 50px;
     outline: red solid 4px;
+    /* align-items: center; */
+    justify-content: center;
 }
 
