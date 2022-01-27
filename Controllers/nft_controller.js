@@ -67,60 +67,116 @@ Nft.deleteMany({}, (error, deletedNFT) => {
 });
 // })
 
-router.post("/", (req, res) => {
-  // Start by console logging things out here for the req, then req.body
-  Nft.create(req.body, (error, createdNFT) => {
-    if (error) console.log(error);
-    console.log(createdNFT);
 
-    res.redirect("/explore");
-  });
-});
 
-//This is bringing me to the Show page for the designated picture!!!!!!!!! Grabbing item by id.
-router.get("/:nftId", (req, res) => {
-  Nft.findById(req.params.nftId, (error, foundNFT) => {
-    if (error) {
-      console.log(error);
-      res.status(404).render("404.ejs", { error: error });
-    }
-    return res.render("showPage.ejs", { nft: foundNFT });
-  });
-});
 
-router.delete("/:nftId", (req, res) => {
-  Nft.findByIdAndDelete(req.params.guitarId, (error, deleteNFT) => {
-    if (error) {
-      console.log(error);
-      res.send(error);
-    }
 
-    console.log(deleteNFT);
-    res.redirect("/explore");
-  });
-});
 
-router.get("/:nftId/edit", (req, res) => {
-  Nft.findById(req.params.guitarId, (error, updatednft) => {
-    if (error) {
-      console.log(error);
-      res.status(404).render("404.ejs", { error: error });
-    }
-    return res.render("createPage.ejs", { nft: updatednft });
-  });
-});
+router.post("/create", (req, res) => {
+      // Start by console logging things out here for the req, then req.body
+      Nft.create(req.body, (error, createdNFT) => {
+            if (error) console.log(error);
+            console.log(createdNFT);
+        
+            res.redirect("/explore");
+          });
+        });
+        
+        //This is bringing me to the Show page for the designated picture!!!!!!!!! Grabbing item by id.
+        
+       
 
-router.put("/:nftId", (req, res) => {
-  Nft.findByIdAndUpdate(req.params.guitarId, req.body, (error, updatedNFT) => {
-    if (error) {
-      console.log(error);
-      res.status(404).render("404.ejs", { error: error });
-    }
+        router.get('/explore/:nftId', async (req, res, next) => {
+            try {
+                const foundNft = await Nft.findById(req.params.nftId)
+        
+                console.log(foundNft);
+                const context = { nft: foundNft }
+                res.render('showPage.ejs', context)
+            } catch (error) {
+                console.log(error);
+                req.error = error;
+                return next();
+            }
+        });
 
-    console.log(updatedNFT);
+        router.delete('/:nftId', async (req, res, next) => {
+            try {
+                const deletedNft = await Nft.findByIdAndDelete(req.params.nftId);
+        
+                console.log(deletedNft);
+                res.redirect('/explore');
+            } catch(error) {
+                console.log(error);
+                req.error = error;
+                return next();
+            }
+        })
+        
+        router.get('/:nftId/edit', async (req, res, next) => {
+            try {
+                const updatedNft = await Nft.findById(req.params.nftId);
+        
+                console.log(updatedNft);
+                return res.render('editPage.ejs', { nft: updatedNft })
+            } catch (error) {
+                console.log(error);
+                req.error = error;
+                return next();
+            }
+        })
+        
+        router.put('/:nftId', async (req, res, next) => {
+        
+            try {
+                const updatedNft = await Nft.findByIdAndUpdate(req.params.nftId, req.body);
+        
+                console.log(updatedNft);
+                return res.redirect('/explore');
+            } catch (error) {
+                console.log(error);
+                req.error = error;
+                return next();
+            }
+        });
 
-    return res.redirect(`/explore`);
-  });
-});
+
+
+
+
+// router.delete("/:nftId", (req, res) => {
+//   Nft.findByIdAndDelete(req.params.guitarId, (error, deleteNFT) => {
+//     if (error) {
+//       console.log(error);
+//       res.send(error);
+//     }
+
+//     console.log(deleteNFT);
+//     res.redirect("/explore");
+//   });
+// });
+
+// router.get("/:nftId/edit", (req, res) => {
+//   Nft.findById(req.params.guitarId, (error, updatednft) => {
+//     if (error) {
+//       console.log(error);
+//       res.status(404).render("404.ejs", { error: error });
+//     }
+//     return res.render("createPage.ejs", { nft: updatednft });
+//   });
+// });
+
+// router.put("/:nftId", (req, res) => {
+//   Nft.findByIdAndUpdate(req.params.guitarId, req.body, (error, updatedNFT) => {
+//     if (error) {
+//       console.log(error);
+//       res.status(404).render("404.ejs", { error: error });
+//     }
+
+//     console.log(updatedNFT);
+
+//     return res.redirect(`/explore`);
+//   });
+// });
 
 module.exports = router;
