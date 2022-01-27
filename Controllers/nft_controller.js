@@ -62,6 +62,46 @@ Nft.deleteMany({}, (error, deletedNFT) => {
           "https://wallpaperaccess.com/full/664881.jpg",
         description: "I dont have a brain but will still sting you in the metaverse",
       },
+      {
+        name: "NFT #5 Terminal to Existential Time",
+        author: "Paco M.",
+        price: 45600,
+        image:
+          "https://wallpapercave.com/wp/wp8064036.jpg",
+        description: "Choose your own destiny",
+      },
+      {
+        name: "NFT #6 Spineless Intelligence",
+        author: "Jim Jelly",
+        price: 45600,
+        image:
+          "https://wallpaperaccess.com/full/664881.jpg",
+        description: "I dont have a brain but will still sting you in the metaverse",
+      },
+      {
+        name: "NFT #7 Spineless Intelligence",
+        author: "Jim Jelly",
+        price: 45600,
+        image:
+          "https://wallpaperaccess.com/full/664881.jpg",
+        description: "I dont have a brain but will still sting you in the metaverse",
+      },
+      {
+        name: "NFT #8 Spineless Intelligence",
+        author: "Jim Jelly",
+        price: 45600,
+        image:
+          "https://wallpaperaccess.com/full/664881.jpg",
+        description: "I dont have a brain but will still sting you in the metaverse",
+      },
+      {
+        name: "NFT #9 Spineless Intelligence",
+        author: "Jim Jelly",
+        price: 45600,
+        image:
+          "https://wallpaperaccess.com/full/664881.jpg",
+        description: "I dont have a brain but will still sting you in the metaverse",
+      },
     ],
     function (error, createdNFT) {
       if (error) {
