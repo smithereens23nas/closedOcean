@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('./partials/header.ejs', {page: 'Author Show Page'}) %>
+
+    <!-- This is my nav bar now -->
+    <%- include ('./partials/nav.ejs') %>
+
+        <section class="hero is-medium has-background-light">
+            <div class="hero-body">
+                <h1 class="title">Author Show Page</h1>
+            </div>
+        </section>
+
+        <div class="container is-max-widescreen p-5">
+            <article class="media">
+                <figure class="media-left">
+                    <p class="image is-328x328">
+
+                    </p>
+                </figure>
+                <div class="media-content">
+                    <div class="content">
+                        <h3>name: <%= author.name %>
+                        </h3>
+
+                        <small>description: <%= author.description %></small>
+
+
+                    </div>
+                </div>
+            </article>
+        </div>
+        </body>
+
+</html>
