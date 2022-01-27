@@ -2,39 +2,97 @@
 <html lang="en">
     
     <!-- This is my heading now -->
-    <%- include ('./partials/header.ejs', {page: 'Explore Collections'}) %>
+    <%- include ('./partials/header.ejs', {page: 'Author'}) %>
     
     <!-- This is my nav bar now -->
     <%- include ('./partials/nav.ejs') %>
     <section class="hero is-medium has-background-light">
-        <div class="hero-body">
-            <p class="title">All NFT's</p>
+        <div class="hero-small">
+            <p class="title">Author Page</p>
         </div>
     </section>
     
-    <main class="container is-max-widescreen">
-        <div class="columns is-multiline p-5">
+    <main class="container is-max-widescreen grid-layout">
+        <div class="columns is-multiline">
             <% for(let idx = 0; idx < nft.length; idx++){ %> 
                 <% const nfts = nft[idx] %>
-                
-                <div class="column is-one-third">
-                    <article class="card">
-                        <section class="card-image">
-                            <figure class="image is-3by3">
-                                <img src="<%= nfts.image %>" alt="Placeholder image" />
-                            </figure>
-                        </div>
-                    </section>
-                    <div class="card-content">
-                        <div class="content">
-                            <h3>
-                                <a href="/explore/<%= nfts._id %>"><%= nfts.name %> </a>
-                            </h3>
-                            
-                            <p>$<%= nfts.price %></p>
-                        </div>
+
+                <div class="card">
+                    <div class="card-image">
+                      <figure class="image is-4by3">
+                        <img src="<%= nfts.image %>" alt="Placeholder image" />                      </figure>
                     </div>
-                </article>
+                    <div class="card-content">
+                      <div class="media">
+                        <div class="media-left">
+                          <figure class="image is-48x48">
+                            <img src="<%= nfts.image %>" alt="Placeholder image" />                          </figure>
+                        </div>
+                        <div class="media-content">
+                          <p class="title is-4">John Smith</p>
+                          <p class="subtitle is-6">@johnsmith</p>
+                        </div>
+                      </div>
+                  
+                      <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                        <a href="#">#css</a> <a href="#">#responsive</a>
+                        <br>
+                        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                      </div>
+                    </div>
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                          <img src="<%= nfts.image %>" alt="Placeholder image" />                      </figure>
+                      </div>
+                      <div class="card-content">
+                        <div class="media">
+                          <div class="media-left">
+                            <figure class="image is-48x48">
+                              <img src="<%= nfts.image %>" alt="Placeholder image" />                          </figure>
+                          </div>
+                          <div class="media-content">
+                            <p class="title is-4">John Smith</p>
+                            <p class="subtitle is-6">@johnsmith</p>
+                          </div>
+                        </div>
+                    
+                        <div class="content">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                          Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                          <a href="#">#css</a> <a href="#">#responsive</a>
+                          <br>
+                          <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                        </div>
+                      </div>
+                      <div class="card-image">
+                        <figure class="image is-4by3">
+                          <img src="<%= nfts.image %>" alt="Placeholder image" />                      </figure>
+                      </div>
+                      <div class="card-content">
+                        <div class="media">
+                          <div class="media-left">
+                            <figure class="image is-48x48">
+                              <img src="<%= nfts.image %>" alt="Placeholder image" />                          </figure>
+                          </div>
+                          <div class="media-content">
+                            <p class="title is-4">John Smith</p>
+                            <p class="subtitle is-6">@johnsmith</p>
+                          </div>
+                        </div>
+                    
+                        <div class="content">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                          Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                          <a href="#">#css</a> <a href="#">#responsive</a>
+                          <br>
+                          <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                        </div>
+                      </div>
+
+                  </div>
+                
             </div>
             <% } %>
         </div>
