@@ -27,4 +27,14 @@ background-image: url("https://free4kwallpapers.com/uploads/originals/2019/10/15
   background-size: cover;
 }
 
+.grid-layout {
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto auto auto;
+  grid-gap: 25px;
+  margin: 75px 0 50px;
+  outline: red solid 4px;
+}
+
 
