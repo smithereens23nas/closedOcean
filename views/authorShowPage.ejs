@@ -16,25 +16,27 @@
         
                 
                 <div class="column is-one-third">
+                    <% if (author){ %>
                     <article class="card">
                         <section class="card-image">
                             <figure class="image is-3by3">
-                                <img src="<%= authors.image %>" alt="Placeholder image" />
+                                <img src="<%= author.image %>" alt="Placeholder image" />
                             </figure>
                         </div>
                     </section>
                     <div class="card-content">
                         <div class="content">
-                            <h3>
-                                <a href="/authorCreate/<%= authors.id %>"><%= authors.name %> </a>
-                            </h3>
-                            
-                            <p>$<%= authors.price %></p>
+
+                                <h3>
+                                    <a href="/explore/<%= author._id %>"><%= author.name %> </a>
+                                </h3>
+                                
+                                <p>$<%= author.description %></p>
+                            </div>
                         </div>
-                    </div>
-                </article>
+                    </article>
+                    <% } %>
             </div>
-            <% } %>
         </div>
     </main>
 </body>

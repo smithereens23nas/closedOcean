@@ -16,7 +16,7 @@ app.use(methodOverride("_method"));
 app.use(methodOverride("_method"));
 app.use("/", controllers.nft);
 
-app.use("/explore", controllers.author);
+app.use("/author", controllers.author);
 
 app.use((req, res, next) => {
   console.log("I'm running for another new route");
