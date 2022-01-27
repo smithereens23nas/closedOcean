@@ -108,7 +108,7 @@ router.post("/create", (req, res) => {
             }
         });
 
-        router.delete('/:nftId', async (req, res, next) => {
+        router.delete('/explore/:nftId', async (req, res, next) => {
             try {
                 const deletedNft = await Nft.findByIdAndDelete(req.params.nftId);
         
@@ -121,7 +121,7 @@ router.post("/create", (req, res) => {
             }
         })
         
-        router.get('/:nftId/edit', async (req, res, next) => {
+        router.get('/explore/:nftId/edit', async (req, res, next) => {
             try {
                 const updatedNft = await Nft.findById(req.params.nftId);
         
@@ -134,7 +134,7 @@ router.post("/create", (req, res) => {
             }
         })
         
-        router.put('/:nftId', async (req, res, next) => {
+        router.put('/explore/:nftId', async (req, res, next) => {
         
             try {
                 const updatedNft = await Nft.findByIdAndUpdate(req.params.nftId, req.body);
