@@ -25,14 +25,14 @@ Author.deleteMany({}, (error, deletedAuthor) => {
     [
       {
         name: "8-Bit_Evolutions",
-        image:"https://i.pinimg.com/originals/81/6b/83/816b83a23a6f4b0405bd6699b854a6bd.jpg",
+        image:"https://wallpapercave.com/wp/wp4363074.jpg",
         description:
           "This is the best class because they named themselves the blue devils!",
       },
       {
         name: "Tmarra122333",
         image:
-          "https://www.rd.com/wp-content/uploads/2021/03/GettyImages-1133605325-scaled-e1617227898456.jpg",
+          "https://lh3.googleusercontent.com/jiW30Y2n596jNb1_TshoKldwuZm_mdCVQL195roQmQ4rLiOIDhbJA6zzT93-wfIhK4KrxVV6PE7pxZUoUPslkI6SYt4_Q0rKU_Yf=w289",
         description: "Another description!",
       },
       {
