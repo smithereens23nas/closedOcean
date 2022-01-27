@@ -87,12 +87,12 @@ Nft.deleteMany({}, (error, deletedNFT) => {
         description: "Eyes",
       },
       {
-        name: "NFT #8 Spineless Intelligence",
-        author: "Jim Jelly",
+        name: "NFT #8 Whomp",
+        author: "Ariel",
         price: 45600,
         image:
           "https://wallpaperaccess.com/full/664881.jpg",
-        description: "I dont have a brain but will still sting you in the metaverse",
+        description: "remember me?",
       },
       {
         name: "NFT #9 Spineless Intelligence",
