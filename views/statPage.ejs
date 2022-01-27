@@ -5,37 +5,83 @@
     <%- include ('./partials/header.ejs', {page: 'NFT Rankings'}) %>
     <!-- nav -->
     <%- include ('./partials/nav.ejs') %>
-    <div class="columns is-multiline is-vcentered is-3">
-        <% for(let idx = 0; idx < nft.length; idx++){ %> 
-            <% const product = nft[idx] %>
-        <div class="column is-one-third">
-          <code>is-one-quarter</code>
-        </div>
-        <div class="column is-one-third">
-          <code>is-one-quarter</code>
-        </div>
-        <div class="column is-one-third">
-          <code>is-one-quarter</code>
-        </div>
-        <div class="column is-one-third">
-          <code>is-one-quarter</code>
-        </div>
-        <div class="column is-one-third">
-            <code>is-one-quarter</code>
-        </div>
-        <div class="column is-one-third">
-            <code>is-one-quarter</code>
-        </div>
-        <div class="column is-one-third">
-            <code>is-one-quarter</code>
-        </div>
-        <div class="column is-one-third">
-            <code>is-one-quarter</code>
-        </div>
-        <div class="column is-one-third">
-            <code>is-one-quarter</code>
-        </div>
-    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th><abbr title="Rank">Rk</abbr></th>
+          <th><abbr title="Image">Pic</abbr></th>
+          <th>Name</th>
+          <th><abbr title="Price">Pr</abbr></th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th><abbr title="Rank">Rk</abbr></th>
+          <th><abbr title="Image">Pic</abbr></th>
+          <th>Name</th>
+          <th><abbr title="Price">Pr</abbr></th>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <th>1</th>
+          <td><img src="https://media.istockphoto.com/vectors/angry-8bit-cartoon-planet-vector-id508011250"></td>
+          <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C." title="Angry Bit">Angry Bit</a>
+          </td>
+          <td>75000</td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td><img src="https://media.istockphoto.com/vectors/angry-8bit-cartoon-planet-vector-id508011250"></td>
+          <td><a href="https://en.wikipedia.org/wiki/Arsenal_F.C." title="Bitman">Bitman</a></td>
+          <td>98</td>
+        </tr>
+        <tr>
+          <th>3</th>
+          <td><img src="https://media.istockphoto.com/vectors/angry-8bit-cartoon-planet-vector-id508011250"></td>
+          <td><a href="https://en.wikipedia.org/wiki/Tottenham_Hotspur_F.C." title="Singularity">Singularity of Humanity</a></td>
+          <td>3200</td>
+        </tr>
+        <tr>
+          <th>4</th>
+          <td><img src="https://media.istockphoto.com/vectors/angry-8bit-cartoon-planet-vector-id508011250"></td>
+          <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C." title="Big Bang">Big Bang of Machine Meets Man</a>
+          </td>
+          <td>75000</td>
+        </tr>
+        <tr>
+          <th>5</th>
+          <td><img src="https://media.istockphoto.com/vectors/angry-8bit-cartoon-planet-vector-id508011250"></td>
+          <td><a href="https://en.wikipedia.org/wiki/Arsenal_F.C." title="Robo-Pets">Robo-Pets Enter Singularity</a></td>
+          <td>98</td>
+        </tr>
+        <tr>
+          <th>6</th>
+          <td><img src="https://media.istockphoto.com/vectors/angry-8bit-cartoon-planet-vector-id508011250"></td>
+          <td><a href="https://en.wikipedia.org/wiki/Tottenham_Hotspur_F.C." title="CryptoPunk">CryptoPunk</a></td>
+          <td>3200</td>
+        </tr>
+        <tr>
+          <th>7</th>
+          <td><img src="https://media.istockphoto.com/vectors/angry-8bit-cartoon-planet-vector-id508011250"></td>
+          <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C." title="Unbearable Bears">Unbearable Bears</a>
+          </td>
+          <td>75000</td>
+        </tr>
+        <tr>
+          <th>8</th>
+          <td><img src="https://media.istockphoto.com/vectors/angry-8bit-cartoon-planet-vector-id508011250"></td>
+          <td><a href="https://en.wikipedia.org/wiki/Arsenal_F.C." title="Kool Kats">Kool Kats</a></td>
+          <td>98</td>
+        </tr>
+        <tr>
+          <th>9</th>
+          <td><img src="https://media.istockphoto.com/vectors/angry-8bit-cartoon-planet-vector-id508011250"></td>
+          <td><a href="https://en.wikipedia.org/wiki/Tottenham_Hotspur_F.C." title="Lazy Lions in Leotards">Lazy Lions in Leotards</a></td>
+          <td>3200</td>
+        </tr>
+      </tbody>
+    </table>
 
 
 
