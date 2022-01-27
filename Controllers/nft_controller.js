@@ -71,12 +71,12 @@ Nft.deleteMany({}, (error, deletedNFT) => {
         description: "Choose your own destiny",
       },
       {
-        name: "NFT #6 Spineless Intelligence",
-        author: "Jim Jelly",
+        name: "NFT #6 ",
+        author: "Ate Bit",
         price: 45600,
         image:
-          "https://wallpaperaccess.com/full/664881.jpg",
-        description: "I dont have a brain but will still sting you in the metaverse",
+          "https://wallpapercave.com/wp/wp4363074.jpg",
+        description: "Laying by the fire",
       },
       {
         name: "NFT #7 Spineless Intelligence",
