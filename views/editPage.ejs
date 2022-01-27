@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <!-- This is my heading now -->
+    <%- include ('./partials/header.ejs') %>
+    
+    <!-- This is my nav bar now -->
+    <%- include ('./partials/nav.ejs') %>
+
+    <section class="hero is-medium has-background-light">
+      <div class="hero-body">
+        <h1 class="title">Edit NFT page</h1>
+      </div>
+    </section>
+
+    <section class="container is-max-widescreen p-5">
+      <!--  NOTE: action will be the route, method will be the HTTP verb-->
+      <form action="/explore/<%=nft._id %>?_method=PUT" method="POST">
+        <div class="field">
+          <label class="label">NFT Name</label>
+          <div class="control">
+            <input
+              class="input"
+              type="text"
+              placeholder="NFT name"
+              name="name"
+              value="<%= nft.name %> "
+            />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">NFT Price</label>
+          <div class="control">
+            <input
+              class="input"
+              type="text"
+              placeholder="NFT price"
+              name="price"
+              value="<%= nft.price %>"
+            />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">NFT Image</label>
+          <div class="control">
+            <input
+              class="input"
+              type="text"
+              placeholder="NFT image"
+              name="image"
+              value="<%= nft.image %> "
+            />
+          </div>
+        </div>
+
+        <div class="field is-grouped">
+          <div class="control">
+            <a class="button is-info" href="/explore/<%= nft._id %> "
+              >Cancel</a
+            >
+            <button class="button is-success">Edit NFT</button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
