@@ -18,6 +18,22 @@ router.get("/author", async (req, res) => {
   }
 });
 
+router.get("/authorCreate", async (req, res) => {
+  try {
+    const author = await Author.find({});
+    const context = { author };
+    // console.log("=======================================================");
+    // // console.log(context);
+
+    // console.log("=======================================================");
+    res.render("authorShowPage.ejs", context);
+  } catch (error) {
+    console.log(error);
+    req.error = error;
+    return next();
+  }
+});
+
 // router.post('/', (req, res) => {
 Author.deleteMany({}, (error, deletedAuthor) => {
   if (error) console.log(error);
