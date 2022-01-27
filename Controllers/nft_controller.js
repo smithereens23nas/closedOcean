@@ -79,12 +79,12 @@ Nft.deleteMany({}, (error, deletedNFT) => {
         description: "Laying by the fire",
       },
       {
-        name: "NFT #7 Spineless Intelligence",
-        author: "Jim Jelly",
+        name: "NFT #7 Goofy Paws",
+        author: "Larry Lyon",
         price: 45600,
         image:
-          "https://wallpaperaccess.com/full/664881.jpg",
-        description: "I dont have a brain but will still sting you in the metaverse",
+          "https://lh3.googleusercontent.com/jiW30Y2n596jNb1_TshoKldwuZm_mdCVQL195roQmQ4rLiOIDhbJA6zzT93-wfIhK4KrxVV6PE7pxZUoUPslkI6SYt4_Q0rKU_Yf=w289",
+        description: "Eyes",
       },
       {
         name: "NFT #8 Spineless Intelligence",
