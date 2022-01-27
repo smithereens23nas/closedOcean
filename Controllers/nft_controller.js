@@ -57,9 +57,49 @@ Nft.deleteMany({}, (error, deletedNFT) => {
       {
         name: "NFT #4 Spineless Intelligence",
         author: "Jim Jelly",
-        price: 45600,
+        price: 15630,
         image:
           "https://wallpaperaccess.com/full/664881.jpg",
+        description: "I dont have a brain but will still sting you in the metaverse",
+      },
+      {
+        name: "NFT #5 Terminal to Existential Time",
+        author: "Paco M.",
+        price: 1600,
+        image:
+          "https://wallpapercave.com/wp/wp8064036.jpg",
+        description: "Choose your own destiny",
+      },
+      {
+        name: "NFT #6 ",
+        author: "Ate Bit",
+        price: 45600,
+        image:
+          "https://wallpapercave.com/wp/wp4363074.jpg",
+        description: "Laying by the fire",
+      },
+      {
+        name: "NFT #7 Goofy Paws",
+        author: "Larry Lyon",
+        price: 45600,
+        image:
+          "https://lh3.googleusercontent.com/jiW30Y2n596jNb1_TshoKldwuZm_mdCVQL195roQmQ4rLiOIDhbJA6zzT93-wfIhK4KrxVV6PE7pxZUoUPslkI6SYt4_Q0rKU_Yf=w289",
+        description: "Eyes",
+      },
+      {
+        name: "NFT #8 Whomp",
+        author: "Ariel",
+        price: 32600,
+        image:
+          "https://wallpaperaccess.com/full/664881.jpg",
+        description: "remember me?",
+      },
+      {
+        name: "NFT #9 Crypto Punk",
+        author: "Craig P.",
+        price: 4600,
+        image:
+          "https://terranft.io/wp-content/uploads/2021/11/LunaPunk_-19-300x300.png",
         description: "I dont have a brain but will still sting you in the metaverse",
       },
     ],
