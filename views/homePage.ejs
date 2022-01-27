@@ -1,60 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- header -->
-    <%- include ('./partials/header.ejs', {page: 'Home'}) %>
+<%- include ('./partials/header.ejs', {page: 'Home' }) %>
 
-<!-- nav -->
-    <%- include ('./partials/nav.ejs') %>
-    <section class="hero is-medium has-background-light">
-        <div class="hero-body">
-            <p class="title">Closed Ocean Home Page</p>
-        </div>
-    </section>
-    <figure class="is-328x328">
-        <img class= "is-rounded" src="http://cdn.supadupa.me/shop/14281/images/1072424/il_fullxfull.468979714_rahc_grande.jpg">
-      </figure>
-      <div class="buttons">
-        <button class="button is-large is-fullwidth is-outlined is-text">Look Around</button>
-      </div>
-      
-      <div class="buttons">
-        <button class="button is-large is-fullwidth is-inverted is-info is-light">Make Your Own</button>
-      </div>
-      <table class="table">
-        <thead>
-          <tr>
-            <th><abbr title="Rank">Rk</abbr></th>
-            <th>Name</th>
-            <th><abbr title="Price">Pr</abbr></th>
-          </tr>
-        </thead>
-        <tfoot>
-            <tr>
-                <th><abbr title="Rank">Rk</abbr></th>
-                <th>Name</th>
-                <th><abbr title="Price">Pr</abbr></th>
-              </tr>
-        </tfoot>
-        <tbody>
-          <tr>
-            <th>1</th>
-            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C." title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
-            </td>
-            <td>38</td>
-          </tr>
-          <tr>
-            <th>2</th>
-            <td><a href="https://en.wikipedia.org/wiki/Arsenal_F.C." title="Arsenal F.C.">Arsenal</a></td>
-            <td>38</td>
-          </tr>
-          <tr>
-            <th>3</th>
-            <td><a href="https://en.wikipedia.org/wiki/Tottenham_Hotspur_F.C." title="Tottenham Hotspur F.C.">Tottenham Hotspur</a></td>
-            <td>38</td>
-          </tr>
-        </tbody>
+  <!-- nav -->
+  <%- include ('./partials/nav.ejs') %>
+   
+<div class="cover-image">
+
+    <div class="buttons">
+      <button class="button is-large is-outlined is-text">Look Around</button>
+    </div>
+    <div class="buttons">
+      <button class="button is-large is-outlined is-info is-light">Make Your Own</button>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th><abbr title="Rank">Rk</abbr></th>
+          <th>Name</th>
+          <th><abbr title="Price">Pr</abbr></th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th><abbr title="Rank">Rk</abbr></th>
+          <th>Name</th>
+          <th><abbr title="Price">Pr</abbr></th>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <th>1</th>
+          <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C." title="Angry Bit">Angry Bit</a>
+            <strong>(C)</strong>
+          </td>
+          <td>75000</td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td><a href="https://en.wikipedia.org/wiki/Arsenal_F.C." title="Bitman">Bitman</a></td>
+          <td>98</td>
+        </tr>
+        <tr>
+          <th>3</th>
+          <td><a href="https://en.wikipedia.org/wiki/Tottenham_Hotspur_F.C." title="Another One">Another One</a></td>
+          <td>3200</td>
+        </tr>
+      </tbody>
     </table>
+</div>
 
-    
-</body>
+
+    </body>
+
 </html>

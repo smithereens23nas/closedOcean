@@ -1,1 +1,76 @@
-<h1>Hi Guys</h1>
+<!DOCTYPE html>
+<html>
+    
+    <%- include ('./partials/header.ejs', {page: 'New NFT'}) %>
+    
+  
+    <%- include ('./partials/nav.ejs') %>
+
+        <section class="hero-is-medium has-background-light">
+            <div class="hero-body">
+                <h1 class="title">Make Your Own NFT</h1>
+            </div>
+        </section>
+            <form action="/explore" method="POST">
+                <div class="field">
+                    <label class="label">NFT Name</label>
+                    <div class="control">
+                        <input
+                            class="input"
+                            type="text"
+                            placeholder="My new NFT"
+                            name="name"
+                        />
+                    </div>
+                </div>
+        
+                <div class="field">
+                    <label class="label">NFT Price</label>
+                    <div class="control">
+                        <input class="input" type="number" placeholder="32000" name="price" />
+                    </div>
+                </div>
+        
+                <div class="field">
+                    <label class="label">NFT Image</label>
+                    <div class="control">
+                        <input
+                            class="input"
+                            type="text"
+                            placeholder="http://"
+                            name="image"
+                        />
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">NFT Author</label>
+                    <div class="control">
+                        <input
+                            class="input"
+                            type="text"
+                            placeholder="Tell the Users who made your NFT"
+                            name="description"
+                        />
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">NFT Description</label>
+                    <div class="control">
+                        <input
+                            class="input"
+                            type="text"
+                            placeholder="Tell the Users all about this"
+                            name="description"
+                        />
+                    </div>
+                </div>
+        
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button class="button is-info">Create NFT</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </body>
+</html>
