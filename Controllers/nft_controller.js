@@ -54,6 +54,14 @@ Nft.deleteMany({}, (error, deletedNFT) => {
           "https://www.artmajeur.com/medias/standard/l/e/lea-roche/artwork/12785927_cat-jewel-70x60.jpg",
         description: "The first ever 1/2 Kitten and 1/2 Machine created by man",
       },
+      {
+        name: "NFT #4 Spineless Intelligence",
+        author: "Jim Jelly",
+        price: 45600,
+        image:
+          "https://wallpaperaccess.com/full/664881.jpg",
+        description: "I dont have a brain but will still sting you in the metaverse",
+      },
     ],
     function (error, createdNFT) {
       if (error) {
