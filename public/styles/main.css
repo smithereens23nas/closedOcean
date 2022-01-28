@@ -110,6 +110,18 @@
         color: whitesmoke;
     }
 
-    
-    
-  
+    .columns.is-multiline {
+        flex-wrap: nowrap;
+    }
+
+    .columns:not(:last-child) {
+        margin-bottom: 50px;
+    }
+
+    .background-pages {
+        background-color: wheat;
+    }
+
+    .author-marg {
+        margin-top: 40px;
+    }
