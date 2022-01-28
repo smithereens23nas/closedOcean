@@ -162,7 +162,6 @@ router.post('/explore', async (req, res, next) => {
     }
 })
 
-
     //This is bringing me to the Show page for the designated picture!!!!!!!!! Grabbing item by id.
         
        
