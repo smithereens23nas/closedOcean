@@ -6,6 +6,14 @@ router.get("/home", function (req, res) {
   res.render("homePage.ejs");
 });
 
+router.get("/explore/create", function(req, res) {
+    res.render("createPage.ejs")
+});
+
+router.get("/explore/stats", function(req, res) {
+    res.render("statPage.ejs")
+});
+
 router.get("/explore", async (req, res) => {
   try {
     const nft = await Nft.find({});
@@ -120,7 +128,7 @@ Nft.deleteMany({}, (error, deletedNFT) => {
 
 
 
-router.post("/create", (req, res) => {
+router.post("/explore/create", (req, res) => {
       // Start by console logging things out here for the req, then req.body
       Nft.create(req.body, (error, createdNFT) => {
             if (error) console.log(error);
