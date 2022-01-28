@@ -2,13 +2,13 @@ const express = require("express");
 const router = express.Router();
 const { Nft } = require("../Models");
 
+
+
 router.get("/home", function (req, res) {
   res.render("homePage.ejs");
 });
 
-router.get("/explore/create", function(req, res) {
-    res.render("createPage.ejs")
-});
+
 
 router.get("/explore/stats", function(req, res) {
     res.render("statPage.ejs")
@@ -18,10 +18,10 @@ router.get("/explore", async (req, res) => {
   try {
     const nft = await Nft.find({});
     const context = { nft };
-    console.log("=======================================================");
-    console.log(context);
+    // console.log("=======================================================");
+    // console.log(context);
 
-    console.log("=======================================================");
+    // console.log("=======================================================");
     res.render("explorePage.ejs", context);
   } catch (error) {
     console.log(error);
@@ -55,12 +55,12 @@ Nft.deleteMany({}, (error, deletedNFT) => {
         description: "The birthplace of Man and Machine",
       },
       {
-        name: "NFT #3 Robo-Pets enter Singularity",
-        author: "MagykCarp",
+        name: "NFT #3 Angry-Bit",
+        author: "8-Bit_Evolutions",
         price: 500,
         image:
           "https://lh3.googleusercontent.com/csJyir8aDza9lPed9kRNYaTydGE0qN3EHMCNi1UkrM--qxP4cvtlQCtqHb0emYl1e2tAIONqrFNgsvPnMoInxvZ6ne-rnXfz1bgfJ8Q=w600",
-        description: "The first ever 1/2 Kitten and 1/2 Machine created by man",
+        description: "Hold your head high, and your 8-bit finger higher",
       },
       {
         name: "NFT #4 Spineless Intelligence",
@@ -71,20 +71,20 @@ Nft.deleteMany({}, (error, deletedNFT) => {
         description: "I dont have a brain but will still sting you in the metaverse",
       },
       {
-        name: "NFT #5 Terminal to Existential Time",
-        author: "Paco M.",
+        name: "NFT #5 Classic 1986 all time Favorite: Mario",
+        author: "MagykCarp",
         price: 1600,
         image:
           "https://lh3.googleusercontent.com/0PoAgQtIDaAxDcWPqn3Lm5BcUennRT1iu4r45UXcNYzkNAO3U8fXUc4kaWp5c4YAcFfGFPSxJncgln4LHq1lg49Zd5fzzRwe6l-ls9U=w600",
         description: "Choose your own destiny",
       },
       {
-        name: "NFT #6 ",
-        author: "Ate Bit",
+        name: "NFT #6 Bit-Man ",
+        author: "8-Bit_Evolutions",
         price: 45600,
         image:
           "https://lh3.googleusercontent.com/jjuTlMckBHMPOodZ4_Nbzi7OgEkc4Dt1vO2Mpo5fwsSDHe0B4Sr1hUqgbVmBJM_R0RnKTe2XpvkJFzxhxKq9Hi3hYWtU-y75Mqa7=w600",
-        description: "Laying by the fire",
+        description: "I'm whatever Gotham needs me to be",
       },
       {
         name: "NFT #7 Goofy Paws",
@@ -92,14 +92,14 @@ Nft.deleteMany({}, (error, deletedNFT) => {
         price: 45600,
         image:
           "https://lh3.googleusercontent.com/jiW30Y2n596jNb1_TshoKldwuZm_mdCVQL195roQmQ4rLiOIDhbJA6zzT93-wfIhK4KrxVV6PE7pxZUoUPslkI6SYt4_Q0rKU_Yf=w289",
-        description: "Eyes",
+        description: "Im Hungry...",
       },
       {
         name: "NFT #8 Whomp",
         author: "Ariel",
         price: 32600,
         image:
-          "https://wallpaperaccess.com/full/664881.jpg",
+          "https://64.media.tumblr.com/56b0d606e4b7ddd2a1e7d4f78e262ab5/tumblr_n0l3cwBAJa1rrftcdo1_500.gifv",
         description: "remember me?",
       },
       {
@@ -115,11 +115,11 @@ Nft.deleteMany({}, (error, deletedNFT) => {
       if (error) {
         return console.log(error);
       }
-      console.log("=== Seed Complete ===");
-      console.log(createdNFT);
+    //   console.log("=== Seed Complete ===");
+    //   console.log(createdNFT);
     }
   );
-  console.log(deletedNFT);
+//   console.log(deletedNFT);
 });
 // })
 
@@ -127,18 +127,43 @@ Nft.deleteMany({}, (error, deletedNFT) => {
 
 
 
+router.get("/explore/create", function(req, res) {
+    console.log("im here")
+    res.render("createPage.ejs")
+});
 
-router.post("/explore/create", (req, res) => {
-      // Start by console logging things out here for the req, then req.body
-      Nft.create(req.body, (error, createdNFT) => {
-            if (error) console.log(error);
-            console.log(createdNFT);
+// router.post("/explore/create", (req, res) => {
+//       // Start by console logging things out here for the req, then req.body
+//       Nft.create(req.body, (error, createdNFT) => {
+//             if (error) console.log(error);
+//             console.log(createdNFT);
         
-            res.redirect("/explore");
-          });
-        });
-        
-        //This is bringing me to the Show page for the designated picture!!!!!!!!! Grabbing item by id.
+//             res.redirect("/explore");
+//         });
+//     });
+    
+
+router.post('/explore', async (req, res, next) => {
+    console.log("im here")
+    try {
+        const createdNft = await Nft.create(req.body)
+        console.log("====================SUCCESS==============================")
+        console.log(createdNft);
+        console.log("==================================================")
+
+        res.redirect("/explore");
+
+    } catch(error) {
+        console.log("======================ERROR============================")
+        console.log(error);
+        console.log("==================================================")
+        req.error = error;
+        return next();
+    }
+})
+
+
+    //This is bringing me to the Show page for the designated picture!!!!!!!!! Grabbing item by id.
         
        
 
