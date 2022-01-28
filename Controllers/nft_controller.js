@@ -43,7 +43,7 @@ Nft.deleteMany({}, (error, deletedNFT) => {
 
         price: 6000,
         image:
-          "https://www.pbs.org/wgbh/nova/media/original_images/hs-2015-29-a-xlarge_web_fSzrnrb.jpg",
+          "https://lh3.googleusercontent.com/z10a_2APyJWcG9FcRuLjLUASNw-HarqEip1fDVrzmBH8lHt9fZnHWRD2TyGQ_b18vnL2VJaVI3v-cPK-KgMrjK-lxqlQ8JKxBqWHKLg=w600",
         description: "The birthplace of Man and Machine",
       },
       {
