@@ -33,6 +33,6 @@ app.get("/*", (req, res) => {
   return res.status(404).render("404", context);
 });
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
   console.log(`I am listenting to ${PORT}`);
 });
