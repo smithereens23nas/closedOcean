@@ -46,18 +46,18 @@ router.get("/:author", async (req, res, next) => {
           name: "8-Bit_Evolutions",
           image:"https://wallpapercave.com/wp/wp4363074.jpg",
           description:
-          "This is the best class because they named themselves the blue devils!",
+          "Pouring every bit of energy into these 8-bit digital creations, one pixel at a time.",
         },
         {
           name: "Tmarra122333",
           image:
-          "https://lh3.googleusercontent.com/jiW30Y2n596jNb1_TshoKldwuZm_mdCVQL195roQmQ4rLiOIDhbJA6zzT93-wfIhK4KrxVV6PE7pxZUoUPslkI6SYt4_Q0rKU_Yf=w289",
-          description: "Another description!",
+          "https://lh3.googleusercontent.com/oOxrPSqIusE3pR1vLRSTQwfn52LnwnsZ_a1nCXked6fwOHrOnhvMBM1uMpshUb8Q4lL-gnlV9YoteT9cXnDgIsz46Zkbo7CImK-yKw=w289",
+          description: "Monkeying Around",
         },
         {
           name: "MagykCarp",        
-          image: "https://hips.hearstapps.com/countryliving.cdnds.net/17/47/1511194376-cavachon-puppy-christmas.jpg",
-          description: "We love coding!",
+          image: "https://lh3.googleusercontent.com/PJUFJTv8x6g9Dn4ucBHsXiarsUI8JeAUuYolMGJ5Rb2IdFvZ4qnA2xgDGZzlV-EX035tYZisHJzQefAlbiqZUhHAfMQTGloB3tW_=w289",
+          description: "Bros for Life",
         },
       ],
       function (error, createdAuthor) {
