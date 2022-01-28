@@ -114,10 +114,6 @@
         flex-wrap: nowrap;
     }
 
-    .columns:not(:last-child) {
-        margin-bottom: 50px;
-    }
-
     .background-pages {
         background-color: wheat;
     }
