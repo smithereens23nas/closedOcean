@@ -51,7 +51,7 @@ Nft.deleteMany({}, (error, deletedNFT) => {
         author: "MagykCarp",
         price: 500,
         image:
-          "https://www.artmajeur.com/medias/standard/l/e/lea-roche/artwork/12785927_cat-jewel-70x60.jpg",
+          "https://lh3.googleusercontent.com/csJyir8aDza9lPed9kRNYaTydGE0qN3EHMCNi1UkrM--qxP4cvtlQCtqHb0emYl1e2tAIONqrFNgsvPnMoInxvZ6ne-rnXfz1bgfJ8Q=w600",
         description: "The first ever 1/2 Kitten and 1/2 Machine created by man",
       },
       {
@@ -67,7 +67,7 @@ Nft.deleteMany({}, (error, deletedNFT) => {
         author: "Paco M.",
         price: 1600,
         image:
-          "https://wallpapercave.com/wp/wp8064036.jpg",
+          "https://lh3.googleusercontent.com/0PoAgQtIDaAxDcWPqn3Lm5BcUennRT1iu4r45UXcNYzkNAO3U8fXUc4kaWp5c4YAcFfGFPSxJncgln4LHq1lg49Zd5fzzRwe6l-ls9U=w600",
         description: "Choose your own destiny",
       },
       {
@@ -75,7 +75,7 @@ Nft.deleteMany({}, (error, deletedNFT) => {
         author: "Ate Bit",
         price: 45600,
         image:
-          "https://wallpapercave.com/wp/wp4363074.jpg",
+          "https://lh3.googleusercontent.com/jjuTlMckBHMPOodZ4_Nbzi7OgEkc4Dt1vO2Mpo5fwsSDHe0B4Sr1hUqgbVmBJM_R0RnKTe2XpvkJFzxhxKq9Hi3hYWtU-y75Mqa7=w600",
         description: "Laying by the fire",
       },
       {

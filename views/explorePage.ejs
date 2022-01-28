@@ -5,7 +5,8 @@
 <%- include ('./partials/header.ejs', {page: 'Author' }) %>
 
     <!-- This is my nav bar now -->
-    <%- include ('./partials/nav.ejs') %>
+    <%- include ('./partials/navExplore.ejs') %>
+    
         <section class="hero is-medium has-background-light">
             <div class="hero-small">
                 <p class="title"></p>
@@ -33,9 +34,9 @@
                                     </div>
                                     <div class="media-content">
 
-                                        <p class="title is-4"><a href='/explore/<%= nfts._id %>'> john smith</a></p>
-                                        <p class="subtitle is-6">@johnsmith</p>
-                                        <a href='/explore/<%= nfts._id %>'> Click for more</a>
+                                        <p class="title is-4"><a href='/explore/<%= nfts._id %>'><%=nfts.name%></a></p>
+                                        <p class="subtitle is-6"><%=nfts.author%></p>
+                                        
                                     </div>
                                 </div>
 
