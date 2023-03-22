@@ -1,4 +1,3 @@
-
 .logo {
   width: 200px;
   height: 100%;
@@ -21,26 +20,26 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  
- /* filter: blur(5px); */
+
+  /* filter: blur(5px); */
 }
 
 .cover-image:before {
-    content: "";
-    position: absolute;
-    width : 100%;
-    height: 100%;
-    background: inherit;
-    z-index: -1;
-    filter: blur(10px);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  z-index: -1;
+  filter: blur(10px);
 }
 
 .foreground-image {
-    position: absolute;
-    right: 100px;
-    top: 175px;
-    width: 500px;
-    height: 500px;
+  position: absolute;
+  right: 100px;
+  top: 175px;
+  width: 500px;
+  height: 500px;
 }
 
 .grid-layout {
@@ -60,7 +59,7 @@
 }
 
 .columns:not(:last-child) {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .explore-cover-Page {
@@ -70,54 +69,60 @@
 }
 
 .table {
-    width: 70%;
-    margin-left: 245px;
-    background-color: lightsalmon;
-    position: absolute;
-    bottom: 0;
+  width: 70%;
+  margin-left: 245px;
+  background-color: lightsalmon;
+  position: absolute;
+  bottom: 0;
 }
 
+.stat-table {
+  width: 70%;
+  margin-left: 245px;
+  background-color: lightsalmon;
+  display: flex;
+  flex-direction: column;
+}
 
-    .home-btn {
-        color: whitesmoke;
-        text-decoration: none;
-        cursor: pointer;
-        
-    }
-    
-    .btn-position {
-        display: flex;
-        flex-direction: row;
-        position: absolute;
-        left: 225px;
-        top: 600px;
-    }
+.home-btn {
+  color: whitesmoke;
+  text-decoration: none;
+  cursor: pointer;
+}
 
-    .hero-txt {
-        position: absolute;
-        left: 100px;
-        top: 500px;
-        color: whitesmoke;
-        text-align: center;
-    }
+.btn-position {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 225px;
+  top: 600px;
+}
 
-    .hero-txt h1 {
-        font-size: 30px;
-    }
+.hero-txt {
+  position: absolute;
+  left: 100px;
+  top: 500px;
+  color: whitesmoke;
+  text-align: center;
+}
 
-    .home-link {
-        text-decoration: none;
-        color: whitesmoke;
-    }
+.hero-txt h1 {
+  font-size: 30px;
+}
 
-    .columns.is-multiline {
-        flex-wrap: nowrap;
-    }
+.home-link {
+  text-decoration: none;
+  color: whitesmoke;
+}
 
-    .background-pages {
-        background-color: wheat;
-    }
+.columns.is-multiline {
+  flex-wrap: nowrap;
+}
 
-    .author-marg {
-        margin-top: 40px;
-    }
+.background-pages {
+  background-color: wheat;
+}
+
+.author-marg {
+  margin-top: 40px;
+}
